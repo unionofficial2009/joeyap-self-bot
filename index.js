@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 const bot = new discord.Client();
 const superagent = require("superagent");
-const randomWord = require("random-words")
+const randomWord = require("random-words");
  
 var spam;
  
@@ -9,15 +9,17 @@ var spam;
  
 function startspam()
 {
-    let {body} = await superagent
-    .get(`https://api.chucknorris.io/jokes/random`);
+    
  
     console.log("Spam starting!")
     var server = bot.guilds.get("431118123664670720");
     var chan = new discord.TextChannel(server,{"id":"487330979908681729"});
     spam = bot.setInterval(()=>
     {
-        chan.send(body.text).then(msg=>{ // Sticking with randomwords.
+       let {body} = await superagent
+       .get(`https://api.chucknorris.io/jokes/random`);     
+     
+        chan.send(body.value).then(msg=>{ // Sticking with randomwords.
             console.log(msg.content);
         });
   
@@ -39,11 +41,11 @@ bot.on("message",msg=>{
     {
         if(msg.content.toLowerCase() == "=start")
         {
-            startspam()
+            startspam();
         }
         else if(msg.content.toLowerCase() == "=stop")
         {
-            stopspam()
+            stopspam();
         }
     }
 });
