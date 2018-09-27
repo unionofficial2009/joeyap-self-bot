@@ -5,7 +5,7 @@ const randomWord = require("random-words");
  
 var spam;
  
-function randomjokes()
+async function randomjokes()
 {
  let {body} = await superagent
  .get(`https://api.chucknorris.io/jokes/random`);
