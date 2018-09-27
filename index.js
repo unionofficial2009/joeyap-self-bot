@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const superagent = require("superagent");
-const randomWord = require("random-words")
+//const randomWord = require("random-words")
  
 
  
@@ -13,7 +13,7 @@ bot.on("ready",()=>{
     var chan = new discord.TextChannel(server,{"id":"487330979908681729"});
     bot.setInterval(()=>
     {
-        chan.send(randomWord()).then(msg=>{
+        chan.send("test").then(msg=>{
             console.log(msg.content);
         });
  
