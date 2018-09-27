@@ -15,7 +15,6 @@ function startspam()
     spam = bot.setInterval(()=>
     {
         chan.send("test").then(msg=>{ // Sticking with randomwords.
-            console.log(msg.content);
         });
   
     },5000);
