@@ -2,6 +2,7 @@ const discord = require("discord.js");
 const bot = new discord.Client();
 const superagent = require("superagent");
 const randomWord = require("random-words");
+const giveMeAJoke = require('give-me-a-joke');
  
 var spam;
  
@@ -16,9 +17,12 @@ function startspam()
     spam = bot.setInterval(()=>
     {       
      
-       chan.send(`${randomWord()} ${randomWord()} ${randomWord()} ${randomWord()} ${randomWord()}`).then(msg=>{ // Sticking with randomwords.
+       giveMeAJoke.getRandomCNJoke (function(joke) {
+        //=> console.log(joke);
+	       chan.send(joke).then(msg=>{ // Sticking with randomwords.
             console.log(msg.content);
         });
+       });
   
     },5000);
 }
