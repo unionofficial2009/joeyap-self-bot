@@ -12,7 +12,8 @@
     "discord.js": "^11.4.2",
     "snekfetch": "^3.6.4",
     "superagent": "^3.8.2",
-    "random-words": "^1.1.0"
+    "random-words": "^1.1.0",
+    "give-me-a-joke": "^0.1.2"
     
   }
 }
