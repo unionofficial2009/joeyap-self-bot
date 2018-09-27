@@ -16,9 +16,7 @@ function startspam()
     spam = bot.setInterval(()=>
     {       
      
-       let {body} = await superagent
-       .get(`https://api.chucknorris.io/jokes/random`);
-       chan.send(body.value;).then(msg=>{ // Sticking with randomwords.
+       chan.send(`${randomWord()} ${randomWord()} ${randomWord()} ${randomWord()} ${randomWord()}`).then(msg=>{ // Sticking with randomwords.
             console.log(msg.content);
         });
   
