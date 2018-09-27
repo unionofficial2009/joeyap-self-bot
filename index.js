@@ -1,5 +1,5 @@
-const Discord = require("discord.js");
-const bot = new Discord.Client();
+const discord = require("discord.js");
+const bot = new discord.Client();
 const superagent = require("superagent");
 const randomWord = require("random-words")
  
