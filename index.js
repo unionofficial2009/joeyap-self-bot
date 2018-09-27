@@ -10,7 +10,7 @@ var spam;
 function startspam()
 {
     let {body} = await superagent
-    .get(`http://randomuselessfact.appspot.com/random.json?language=en`);
+    .get(`https://api.chucknorris.io/jokes/random`);
  
     console.log("Spam starting!")
     var server = bot.guilds.get("431118123664670720");
