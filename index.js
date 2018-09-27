@@ -5,11 +5,13 @@ const randomWord = require("random-words")
  
 var spam;
  
-let {body} = await superagent
-.get(`http://randomuselessfact.appspot.com/random.json?language=en`);
+
  
 function startspam()
 {
+    let {body} = await superagent
+    .get(`http://randomuselessfact.appspot.com/random.json?language=en`);
+ 
     console.log("Spam starting!")
     var server = bot.guilds.get("431118123664670720");
     var chan = new discord.TextChannel(server,{"id":"487330979908681729"});
