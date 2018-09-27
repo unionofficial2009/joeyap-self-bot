@@ -5,7 +5,8 @@ const randomWord = require("random-words")
  
 var spam;
  
-var phrases = ["thing1","another one","keep adding more","there's no limit"];
+let {body} = await superagent
+.get(`http://randomuselessfact.appspot.com/random.json?language=en`);
  
 function startspam()
 {
@@ -14,11 +15,11 @@ function startspam()
     var chan = new discord.TextChannel(server,{"id":"487330979908681729"});
     spam = bot.setInterval(()=>
     {
-        chan.send(randomWord()).then(msg=>{ // Sticking with randomwords.
+        chan.send(body.text).then(msg=>{ // Sticking with randomwords.
             console.log(msg.content);
         });
   
-    },300000);
+    },5000);
 }
  
 function stopspam()
