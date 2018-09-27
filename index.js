@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const bot = new discord.Client();
+const bot = new Discord.Client();
 const superagent = require("superagent");
 const randomWord = require("random-words")
  
@@ -29,7 +29,7 @@ function stopspam()
  
 bot.on("ready",()=>{
     console.log("Ready!");
-})
+});
  
 bot.on("message",msg=>{
     if(msg.author.id == "421634731709562886")
@@ -43,7 +43,7 @@ bot.on("message",msg=>{
             stopspam()
         }
     }
-})  
+});
 
 
 
