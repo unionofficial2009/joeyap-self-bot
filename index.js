@@ -31,8 +31,8 @@ bot.on("ready",()=>{
 })
  
 bot.on("message",msg=>{
-    if(msg.author.id == "374886124126208000")
-    {
+    //if(msg.author.id == "374886124126208000")
+    //{
         if(msg.content.toLowerCase() == "=start")
         {
             startspam()
@@ -41,7 +41,7 @@ bot.on("message",msg=>{
         {
             stopspam()
         }
-    }
+    //}
 })  
 
 
