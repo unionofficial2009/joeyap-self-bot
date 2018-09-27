@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
-const bot = new Discord.Client();
+const bot = new discord.Client();
 const superagent = require("superagent");
-//const randomWord = require("random-words")
+const randomWord = require("random-words")
  
 var spam;
  
@@ -14,7 +14,8 @@ function startspam()
     var chan = new discord.TextChannel(server,{"id":"487330979908681729"});
     spam = bot.setInterval(()=>
     {
-        chan.send("test").then(msg=>{ // Sticking with randomwords.
+        chan.send(randomWord()).then(msg=>{ // Sticking with randomwords.
+            console.log(msg.content);
         });
   
     },5000);
