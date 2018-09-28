@@ -16,8 +16,10 @@ function startspam()
     var chan = new discord.TextChannel(server,{"id":"487330979908681729"});
     spam = bot.setInterval(()=>
     {       
-     
-       giveMeAJoke.getRandomCNJoke (function(joke) {
+       
+       var fn = "Joe";
+       var ln = "Yap";	    
+       giveMeAJoke.getCustomJoke (fn, ln, function(joke) {
         //=> console.log(joke);
 	       chan.send(joke).then(msg=>{ // Sticking with randomwords.
             console.log(msg.content);
