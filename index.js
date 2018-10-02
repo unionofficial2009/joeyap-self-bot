@@ -19,7 +19,11 @@ function startspam()
        
        chan.send(randomWord()).then(msg=>{
             console.log(msg.content);
-        });
+        }).catch((err) => {
+            chan.send("=start").then(msg=>{
+            console.log(msg.content);
+          }); 	   
+      });	  
   
     },300000);
 }
