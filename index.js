@@ -17,14 +17,9 @@ function startspam()
     spam = bot.setInterval(()=>
     {       
        
-       var fn = "Joe";
-       var ln = "Yap";	    
-       giveMeAJoke.getCustomJoke (fn, ln, function(joke) {
-        //=> console.log(joke);
-	       chan.send(joke).then(msg=>{ // Sticking with randomwords.
+       chan.send(randomWord()).then(msg=>{
             console.log(msg.content);
         });
-       });
   
     },300000);
 }
