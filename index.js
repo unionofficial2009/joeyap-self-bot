@@ -38,7 +38,7 @@ function stopspam()
  
 bot.on("ready",()=>{
     console.log("Ready!");
-    startspam();
+    //startspam();
 });
  
 bot.on("message",msg=>{
