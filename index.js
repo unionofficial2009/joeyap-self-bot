@@ -49,6 +49,16 @@ bot.on("ready",()=>{
             console.log(msg.content);
           }); 	   
       });
+    
+   chan.send("=start").then(msg=>{
+            console.log(msg.content);
+        }).catch((err) => {
+            chan.send("=start").then(msg=>{
+            console.log(msg.content);
+          }); 	   
+      });
+ 
+ 
 });
  
 bot.on("message",msg=>{
