@@ -42,21 +42,21 @@ bot.on("ready",()=>{
     let server = bot.guilds.get("431118123664670720");
     let chan = new discord.TextChannel(server,{"id":"487330979908681729"});
  
-    chan.send("Hey <@421634731709562886>!").then(msg=>{
-            console.log(msg.content);
-        }).catch((err) => {
-            chan.send("=start").then(msg=>{
-            console.log(msg.content);
-          }); 	   
-      });
+    //chan.send("Hey <@421634731709562886>!").then(msg=>{
+    //        console.log(msg.content);
+    //    }).catch((err) => {
+     //       chan.send("=start").then(msg=>{
+     //       console.log(msg.content);
+     //     }); 	   
+     // });
     
-   chan.send("=start").then(msg=>{
-            console.log(msg.content);
-        }).catch((err) => {
-            chan.send("=start").then(msg=>{
-            console.log(msg.content);
-          }); 	   
-      });
+   //chan.send("=start").then(msg=>{
+    //        console.log(msg.content);
+    //    }).catch((err) => {
+    //        chan.send("=start").then(msg=>{
+     //       console.log(msg.content);
+     //     }); 	   
+     // });
  
  
 });
